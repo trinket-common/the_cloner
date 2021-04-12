@@ -29,8 +29,8 @@ DORITOS_MOTOROLA="DoritosMotorola"
 # Repositories List
 REPO_DEVICE="device_motorola_doha"
 REPO_DEVICE_COMMON="device_motorola_trinket-common"
-REPO_VENDOR="vendor_motorola"
-REPO_VENDOR_COMMON="vendor_motorola_trinket-common"
+REPO_VENDOR="vendor_motorola_doha"
+REPO_VENDOR_COMMON="vendor_motorola_sm6125-common"
 REPO_KERNEL="kernel_motorola_trinket"
 REPO_SEPOLICY="sepolicy_trinket-common"
 
@@ -43,14 +43,15 @@ STAGING="staging/lineage-17.1"
 # Motorola Paths
 PATH_DEVICE="device/motorola/doha"
 PATH_DEVIE_COMMON="device/motorola/trinket-common"
-PATH_VENDOR="vendor/motorola"
-PATH_VENDOR_COMMON="vendor/motorola/trinket-common"
+PATH_VENDOR="vendor/motorola/doha"
+PATH_VENDOR_COMMON="vendor/motorola/sm6125-common"
 PATH_SEPOLICY="device/motorola/trinket-common/sepolicy"
 PATH_KERNEL="kernel/motorola/trinket"
 
 # Setup
 ${CLONE} ${STAGING} ${GITHUB}/${TRINKET_COMMON}/${REPO_DEVICE} ${PATH_DEVICE}
 ${CLONE} ${STAGING} ${GITHUB}/${TRINKET_COMMON}/${REPO_DEVICE_COMMON} ${PATH_DEVIE_COMMON}
+${CLONE} ${STAGING} ${GITHUB}/${TRINKET_COMMON}/${REPO_VENDOR} ${PATH_VENDOR}
 ${CLONE} ${STAGING} ${GITHUB}/${TRINKET_COMMON}/${REPO_VENDOR_COMMON} ${PATH_VENDOR_COMMON}
 ${CLONE} ${STAGING} ${GITHUB}/${TRINKET_COMMON}/${REPO_KERNEL} ${PATH_KERNEL}
 ${CLONE} ${STAGING} ${GITHUB}/${TRINKET_COMMON}/${REPO_SEPOLICY} ${PATH_SEPOLICY}
